@@ -1,0 +1,55 @@
+
+ubuntu@ip-172-31-1-97:~/catkin_ws$ source devel/setup.bash
+ubuntu@ip-172-31-1-97:~/catkin_ws$ roslaunch my_robot world.launch
+... logging to /home/ubuntu/.ros/log/e4ab44fc-987d-11ee-b6d1-178bfd8c3e68/roslaunch-ip-172-31-1-97-2719.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+xacro: in-order processing became default in ROS Melodic. You can drop the option.
+xacro: in-order processing became default in ROS Melodic. You can drop the option.
+started roslaunch server http://ip-172-31-1-97:35901/
+
+SUMMARY
+========
+
+PARAMETERS
+ * /gazebo/enable_ros_network: True
+ * /robot_description: <?xml version="1....
+ * /rosdistro: noetic
+ * /rosversion: 1.16.0
+ * /use_sim_time: True
+
+NODES
+  /
+    gazebo (gazebo_ros/gzserver)
+    gazebo_gui (gazebo_ros/gzclient)
+    urdf_spawner (gazebo_ros/spawn_model)
+
+auto-starting new master
+process[master]: started with pid [2742]
+ROS_MASTER_URI=http://localhost:11311
+
+setting /run_id to e4ab44fc-987d-11ee-b6d1-178bfd8c3e68
+process[rosout-1]: started with pid [2755]
+started core service [/rosout]
+process[gazebo-2]: started with pid [2758]
+process[gazebo_gui-3]: started with pid [2761]
+process[urdf_spawner-4]: started with pid [2768]
+[INFO] [1702337699.193683, 0.000000]: Loading model XML from ros parameter robot_description
+[INFO] [1702337699.199524, 0.000000]: Waiting for service /gazebo/spawn_urdf_model
+[ INFO] [1702337724.214484679]: Finished loading Gazebo ROS API Plugin.
+[ INFO] [1702337724.216263318]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...
+[ INFO] [1702337724.382542395]: Finished loading Gazebo ROS API Plugin.
+[ INFO] [1702337724.383855417]: waitForService: Service [/gazebo_gui/set_physics_properties] has not been advertised, waiting...
+[ INFO] [1702337726.260229514]: waitForService: Service [/gazebo/set_physics_properties] is now available.
+[ INFO] [1702337726.284445413, 0.006000000]: Physics dynamic reconfigure ready.
+[INFO] [1702337726.288611, 0.000000]: Calling service /gazebo/spawn_urdf_model
+Error [parser_urdf.cc:3154] Unable to call parseURDF on robot model
+Error [parser.cc:488] parse as old deprecated model file failed.
+[INFO] [1702337736.312622, 10.015000]: Spawn status: SpawnModel: Entity pushed to spawn queue, but spawn service timed out waiting for entity to appear in simulation under the name my_robot
+[ERROR] [1702337736.314261, 10.016000]: Spawn service failed. Exiting.
+[urdf_spawner-4] process has died [pid 2768, exit code 1, cmd /opt/ros/noetic/lib/gazebo_ros/spawn_model -urdf -param robot_description -model my_robot -x 0 -y 0 -z 0 -R 0 -P 0 -Y 0 __name:=urdf_spawner __log:=/home/ubuntu/.ros/log/e4ab44fc-987d-11ee-b6d1-178bfd8c3e68/urdf_spawner-4.log].
+log file: /home/ubuntu/.ros/log/e4ab44fc-987d-11ee-b6d1-178bfd8c3e68/urdf_spawner-4*.log
+
+
