@@ -8,7 +8,20 @@ ros::ServiceClient client;
 // This function calls the command_robot service to drive the robot in the specified direction
 void drive_robot(float lin_x, float ang_z)
 {
-    // TODO: Request a service and pass the velocities to it to drive the robot
+// DONE: Request a service and pass the velocities to it to drive the robot
+  ROS_INFO("Sending request to move the robot.");
+
+  // Initialize service with request values
+  ball_chaser::DriveToTarget srv;
+  srv.request.linear_x = lin_x;
+  srv.request.angular_z = ang_z;
+
+  // Attempt to call the service and log error if call fails
+  if (!client.call(srv)) 
+  {
+    ROS_ERROR("Failed to call service /ball_chaser/command_robot");
+  }
+  
 }
 
 // This callback function continuously executes and reads the image data
