@@ -41,10 +41,10 @@ Proposed Directory Structure:
     │   │   ├── DriveToTarget.srv
     │   ├── CMakeLists.txt             # compiler instructions
     │   ├── package.xml                # package info
-    │ 
+    │   |
     ├── my_ball                        # white ball model for gazebo
     │  ├── model.sdf
-    │  ├── model
+    │  ├── model.config
     |                 
     └──                              
 ```
