@@ -40,7 +40,12 @@ Proposed Directory Structure:
     │   ├── srv                        # service folder for ROS services
     │   │   ├── DriveToTarget.srv
     │   ├── CMakeLists.txt             # compiler instructions
-    │   ├── package.xml                # package info                  
+    │   ├── package.xml                # package info
+    │ 
+    ├── my_ball                        # white ball model for gazebo
+    │  ├── model.sdf
+    │  ├── model
+    |                 
     └──                              
 ```
 
