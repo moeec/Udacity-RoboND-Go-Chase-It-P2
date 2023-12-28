@@ -56,8 +56,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate services in the 'srv' folder
 # add_service_files(
 #   FILES
-#   Service1.srv
-#   Service2.srv
+    DriveToTarget.srv
 # )
 
 ## Generate actions in the 'action' folder
@@ -133,7 +132,9 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/ball_chaser_node.cpp)
+#add_executable(${PROJECT_NAME}_node src/ball_chaser_node.cpp)
+add_executable(drive_bot src/drive_bot.cpp)
+add_executable(process_image src/process_image.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
