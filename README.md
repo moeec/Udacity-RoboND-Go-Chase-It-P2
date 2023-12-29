@@ -13,6 +13,14 @@ $ source devel/setup.bash
 
 $ roslaunch my_robot world.launch
 
+Quick Launch:
+
+After git clone place *.sh files in src directory and run : 
+
+run1_world_launch.sh
+run2_ball_chaser.sh
+run3_visualize.sh
+
 
 Proposed Directory Structure:
 
