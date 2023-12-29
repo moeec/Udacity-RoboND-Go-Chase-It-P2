@@ -1,7 +1,8 @@
 <?xml version='1.0'?>
-<sdf version='1.7'>
+<sdf version='1.6'>
   <model name='my_ball'>
     <link name='link'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
       <inertial>
         <mass>1</mass>
         <inertia>
@@ -12,12 +13,10 @@
           <iyz>0</iyz>
           <izz>0.1</izz>
         </inertia>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
       </inertial>
       <self_collide>0</self_collide>
-      <enable_wind>0</enable_wind>
       <kinematic>0</kinematic>
-      <pose>0 0 0 0 -0 0</pose>
       <gravity>1</gravity>
       <visual name='visual'>
         <geometry>
@@ -30,22 +29,22 @@
             <name>Gazebo/Grey</name>
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
-          <shader type='pixel'>
-            <normal_map>__default__</normal_map>
-          </shader>
           <ambient>1 1 1 1</ambient>
           <diffuse>1 1 1 1</diffuse>
           <specular>1 1 1 1</specular>
-          <emissive>1 1 1 1</emissive>
+          <emissive>0 0 0 1</emissive>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
         </material>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <transparency>0</transparency>
         <cast_shadows>1</cast_shadows>
       </visual>
       <collision name='collision'>
         <laser_retro>0</laser_retro>
         <max_contacts>10</max_contacts>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <sphere>
             <radius>0.1</radius>
