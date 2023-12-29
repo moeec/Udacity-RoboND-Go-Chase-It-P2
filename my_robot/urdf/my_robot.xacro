@@ -180,7 +180,6 @@
 
   <!-- Hokuyo Lidar -->
 
-
   <link name="hokuyo">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -216,13 +215,3 @@
   </joint>
 
 </robot>
-
-
-
-
-
-
-
-
-
-
