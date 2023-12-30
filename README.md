@@ -92,7 +92,11 @@ $ source devel/setup.bash
 $ roslaunch ball_chaser ball_chaser.launch
 ```
 
-5. Play around! Pick up the white ball and place in front of the mobile robot. The robot will follow the ball.
+5. Play around!
+
+   Pick up the white ball and place in front of the mobile robot.
+
+   The robot will follow the ball.
 
 ![Alt text](Udacity-RoboND-Go-Chase-It-P2.png)
 
