@@ -548,28 +548,6 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='my_robot'>
-        <pose>-3.52047 -2.87086 0.099999 -1e-05 0.000658 0.706364</pose>
-        <scale>1 1 1</scale>
-        <link name='left_wheel'>
-          <pose>-3.61783 -2.75675 0.099998 -1.5e-05 -0.251839 0.706368</pose>
-          <velocity>-0.001433 0.001144 -0.003219 -0.014647 -0.013153 0.000549</velocity>
-          <acceleration>-2.63162 2.69499 -6.4376 1.23182 -0.127319 0.386201</acceleration>
-          <wrench>-13.1581 13.4749 -32.188 0 -0 0</wrench>
-        </link>
-        <link name='right_wheel'>
-          <pose>-3.42311 -2.98497 0.100001 0 0.198209 0.706364</pose>
-          <velocity>-0.001306 0.001401 0.00326 -0.014088 -0.013193 0.000309</velocity>
-          <acceleration>-2.53914 3.07107 6.52027 2.76041 -0.691732 -0.09418</acceleration>
-          <wrench>-12.6957 15.3553 32.6013 0 -0 0</wrench>
-        </link>
-        <link name='robot_footprint'>
-          <pose>-3.52047 -2.87086 0.099999 -1e-05 0.000658 0.706364</pose>
-          <velocity>-0.001119 0.001062 -1.9e-05 -0.015997 -0.013899 0.000131</velocity>
-          <acceleration>-2.08425 2.46084 -0.08049 -2.1812 -0.00554 2.69392</acceleration>
-          <wrench>-31.4722 37.1587 -1.2154 0 -0 0</wrench>
-        </link>
-      </model>
       <model name='pine_tree'>
         <pose>6.26314 4.75833 0 0 -0 0</pose>
         <scale>1 1 1</scale>
