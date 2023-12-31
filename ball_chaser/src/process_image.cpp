@@ -25,33 +25,33 @@ void drive_robot(float lin_x, float ang_z)
 }
 
 // This callback function continuously executes and reads the image data
-void process_image_callback(const sensor_msgs::Image img)
-{
-    const int white_pixel = 255;
-
-    // Iterate through every pixel in the image
-    for (int i = 0; i < img.height * img.step; i += 3)
+void process_image_callback(const sensor_msgs::Image& img) 
     {
-        // Check for white pixel
-        if (img.data[i] == white_pixel && img.data[i + 1] == white_pixel && img.data[i + 2] == white_pixel)
+    enum Side {LEFT, RIGHT, MID, NO_BALL};
+    Side side = NO_BALL;
+
+    for (int i = 0; i < img.height * img.step; i += 3) 
+
         {
-            int column_index = i % img.step;
-
-            // Determine the direction based on the column index
-            if (column_index < img.step / 3)
-                drive_robot(0.5, 1); // Turn left
-            else if (column_index < 2 * img.step / 3)
-                drive_robot(0.5, 0); // Move forward
-            else
-                drive_robot(0.5, -1); // Turn right
-
-            return; // Exit after finding the ball
+        if (img.data[i] == 255 && img.data[i+1] == 255 && img.data[i+2] == 255) { // white ball found
+            auto col = i % img.step;
+            side = (col < img.step * 0.4) ? LEFT : (col > img.step * 0.6) ? RIGHT : MID;
+            break;
         }
     }
 
-    // If no white pixel found, stop the robot
-    drive_robot(0, 0);
+    float linear_x = 0.0, angular_z = 0.0;
+    switch(side) 
+    {
+        case LEFT:   linear_x = 0.5; angular_z = 1.0; break;
+        case RIGHT:  linear_x = 0.5; angular_z = -1.0; break;
+        case MID:    linear_x = 0.5; break;
+        case NO_BALL: break; // Default 0.0 values are already set for both speeds
+    }
+
+    drive_robot(linear_x, angular_z);
 }
+
 int main(int argc, char** argv)
 {
     // Initialize the process_image node and create a handle to it
