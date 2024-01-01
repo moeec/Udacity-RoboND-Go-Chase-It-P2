@@ -21,7 +21,9 @@ mkdir worlds
 sleep .3 # Waits 0.3 second.
 cd ~/catkin_ws/src/my_robot/worlds/
 touch empty.world
-echo "<sdf version="1.7">
+echo "<?xml version="1.0" encoding="UTF-8"?>
+
+<sdf version="1.4">
 
   <world name="default">
 
@@ -47,7 +49,9 @@ echo "<sdf version="1.7">
 sleep .5 # Waits 0.5 second.
 cd ~/catkin_ws/src/my_robot/launch/ 
 touch world.launch
-echo "<launch>
+echo "<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
 
   <!-- World File -->
   <arg name="world_file" default="$(find my_robot)/worlds/empty.world"/>
